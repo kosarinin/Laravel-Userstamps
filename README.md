@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/kosarinin/Laravel-Userstamps/actions">
-        <img src="https://github.com/kosarinin/Laravel-Userstamps/actions/workflows/build.yml/badge.svg" alt="Build Status">
+        <img src="https://github.com/kosarinin/Laravel-Userstamps/actions/workflows/tests.yml/badge.svg" alt="Build Status">
     </a>
     <a href="https://packagist.org/packages/wildside/userstamps">
         <img src="https://poser.pugx.org/wildside/userstamps/d/total.svg" alt="Total Downloads">
