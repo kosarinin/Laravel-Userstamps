@@ -30,6 +30,9 @@ jobs:
         run: |
           composer require "illuminate/contracts:${{ matrix.laravel }}" "phpunit/phpunit:${{ matrix.phpunit }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
 
+      - name: List
+        run: ls -l
+
       - name: Tests
         run: vendor/bin/phpunit
 
