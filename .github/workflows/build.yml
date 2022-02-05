@@ -29,6 +29,7 @@ jobs:
       - name: Composer dependencies
         run: |
           composer require "illuminate/contracts:${{ matrix.laravel }}" "phpunit/phpunit:${{ matrix.phpunit }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+          composer install
           ls -l
 
       - name: List
