@@ -15,7 +15,7 @@ jobs:
             phpunit: "~5.0"
             testbench: "3.2.*"
 
-    name: P-${{ matrix.php}}
+    name: PHP-${{ matrix.php}}-LARAVEL-${{ matrix.laravel }}-PHPUNIT-${{ matrix.phpunit }}-TESTBENCH-${{ matrix.testbench }}
 
     steps:
       - name: Checkout code
@@ -25,6 +25,13 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
+
+      - name: Composer dependencies
+        run: |
+          composer require "illuminate/contracts:${{ matrix.laravel }}" "phpunit/phpunit:${{ matrix.phpunit }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+
+      - name: Tests
+        run: vendor/bin/phpunit
 
 #on: push
 #
